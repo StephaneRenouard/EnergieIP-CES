@@ -88,22 +88,28 @@ public class CES_Servlet extends HttpServlet {
         	int varia = Integer.parseInt(param2);
     		energieAPI.setGroupLightPercentage(2, varia);
     		
-        }else if(param1.matches("up")){ // 
+        }else if(param1.matches("E")){ // groupe
     		
         	AutoMod.auto = false;
     		
-        	
-        	energieAPI.setShutterUp(406);
+        	int varia = Integer.parseInt(param2);
+    		energieAPI.setGroupLightPercentage(3, varia);
+    		
+        }   
+        else if(param1.matches("up")){ // 
+    		
+        	AutoMod.auto = false;
+        	energieAPI.setShutterUp(105);
         }
         else if(param1.matches("stop")){ // 
+  
         	AutoMod.auto = false;
-    		
-        	energieAPI.setShutterStop(406);
+    		energieAPI.setShutterStop(105);
         }
         else if(param1.matches("down")){ // 
+        	
         	AutoMod.auto = false;
-    		
-        	energieAPI.setShutterDown(406);
+    		energieAPI.setShutterDown(105);
         }
         else if(param1.matches("auto")){ // 
         	AutoMod.auto = true;
